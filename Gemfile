@@ -53,3 +53,5 @@ group :test do
   gem 'webmock'
 
 end
+
+gem 'devise'

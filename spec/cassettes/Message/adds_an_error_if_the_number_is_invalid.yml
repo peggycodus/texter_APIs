@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<twilio account sid:<twilio auth token@api.twilio.com/2010-04-01/Accounts/<twilio
+      account sid/Messages.json
+    body:
+      encoding: US-ASCII
+      string: Body=hi&To=1111&From=6502488826
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '31'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Date:
+      - Mon, 22 Sep 2014 22:39:22 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '172'
+      Connection:
+      - close
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+    body:
+      encoding: UTF-8
+      string: "{\"code\": 21212, \"message\": \"The 'From' number 6502488826 is not
+        a valid phone number or shortcode.\", \"more_info\": \"https://www.twilio.com/docs/errors/21212\",
+        \"status\": 400}"
+    http_version: 
+  recorded_at: Mon, 22 Sep 2014 22:39:16 GMT
+recorded_with: VCR 2.9.0

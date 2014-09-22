@@ -10,9 +10,13 @@ end
 
 def create
   @message = Message.new(message_params)
+
   if @message.save
     flash[:notice] = "Your message has been sent"
-    redirect_to messages_path
+    respond_to do |format|
+      format.html {redirect_to messages_path}
+      format.js
+    end
   else
     render 'new'
   end

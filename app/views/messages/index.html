@@ -7,4 +7,14 @@
   <% end %>
 </ul>
 
-<%= link_to 'New Message', new_message_path %>
+
+<br> <hr>
+<div id="new_link">
+  <%= link_to 'New Message', new_message_path, remote: true  %>
+</div>
+
+<div id="new_message">
+  <%= render 'message' %>
+</div>
+
+
